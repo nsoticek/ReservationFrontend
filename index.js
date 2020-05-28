@@ -15,8 +15,12 @@ function login() {
     xhttp.setRequestHeader("Content-Type", "application/json");
     xhttp.onreadystatechange = function() {
         if(this.readyState == 4 && this.status == 200) {
-            window.location = "reservation_page.html"
+           if(this.responseText === "Login failed!") {
+            alert(this.responseText);
+           } else {
+            window.location = "reservation_page.html";
             localStorage['token'] = this.responseText;
+           }
         }
     }
     xhttp.send(myJson);
