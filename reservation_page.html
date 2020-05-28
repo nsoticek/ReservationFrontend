@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Tischreservierung</title>
+    <link rel="stylesheet" href="reservation_page.css" type="text/css">
+    <script src="reservation_page.js"></script>
+</head>
+
+<body>
+    <div class="reservationContainer">
+        <div class="titleContainer">
+            <h1>Online Tischreservierung</h1>
+            <h3>Jetzt schnell und einfach reservieren</h3>
+        </div>
+
+        <div class="inputContainer">
+            <p>Wieviele Sitzplätze möchten Sie reservieren?</p>
+            <input type="number" id="seats" name="seats">
+            <button onclick="addReservation()">Reservieren</button>
+        </div>
+
+        <div class="inputContainer">
+            <p>Reservierung stornieren (ID)</p>
+            <input type="number" id="inputId" name="inputId">
+            <button onclick="deleteReservation()">Stornieren</button>
+            <button onclick="getReservations()">Reservierungen abrufen</button>
+        </div>
+
+        <div class="updateContainer" id="updateContainer">
+            <p id="update" onclick="updateFields()">Reservierung updaten (ID) ⯆</p>
+        </div>
+
+        <div class="outputContainer" id="outputContainer">
+
+        </div>
+    </div>
+</body>
