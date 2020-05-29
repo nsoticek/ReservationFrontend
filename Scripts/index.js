@@ -18,7 +18,7 @@ function login() {
            if(this.responseText === "Login failed!") {
             alert(this.responseText);
            } else {
-            window.location = "reservation_page.html";
+            window.location = "../Sites/reservation_page.html";
             localStorage['token'] = this.responseText;
            }
         }
